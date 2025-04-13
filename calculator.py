@@ -27,7 +27,7 @@ while flag:
 
     print("*************Python Calculator*************")
 
-    end_game = input("Enter q to quit: ")
-    if end_game == 'q':
-        break
+    end_program = input("Enter q to quit: ")
+    if end_program == 'q':
+        flag = False
 
