@@ -34,8 +34,7 @@ def rock_paper_scissors(name):
         else:
             print("You lose!")
 
-        again = input("\nDo you want to play again? (y/n): ").lower()
-        if again != 'y':
+        if input("\nDo you want to play again? (y/n): ").lower() != 'y':
             is_running = False
             print("Thanks for playing!")
 
