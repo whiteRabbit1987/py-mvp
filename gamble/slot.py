@@ -10,6 +10,7 @@ def main():
         f"\n3*🌟 = $10,000")
     total = int(input("Deposit to play: "))
     first_spin = True
+    on_house = 0
     while True:
         choice = start_game()
         if choice == '1':
@@ -17,16 +18,23 @@ def main():
                     for x in range(3):
                         print('🍒', end=' ')
                     first_spin = False
-                    total += 100
+                    total += 10
                     print()
                     continue
             else:
-                if total == 0:
+                if total <= 4:
                     print("No more spins")
                     sys.exit()
                 else:
                     total += spin()
-                    total -= 1
+                    total -= 5
+                    if total <= 5:
+                        if on_house < 1:
+                            on_house += 1
+                            pitty = 0
+                            pitty += random.randint(1, 50)
+                            total += pitty
+                            print(f"You get ${pitty} on the house!")
                     print(f"Total: ${total}")
 
         elif choice == '2':
