@@ -1,8 +1,7 @@
 # Python Banking Program
 
 def main():
-    balance = 0
-    is_running = True
+    balance, is_running = 0, True
 
     while is_running:
         print("**** BANKING ****"
@@ -29,6 +28,6 @@ def main():
             break
     print("Done..." if is_running else  "Have a nice day!")
 
-
 if __name__ == '__main__':
     main()
+
