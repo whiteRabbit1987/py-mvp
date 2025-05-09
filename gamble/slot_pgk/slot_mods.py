@@ -14,7 +14,7 @@ def spin():
         spin_result.append(char)
 
     print("\n******************")
-    print(" ".join(spin_result))
+    print("   | ".join(spin_result))
     print("******************\n")
 
     # Check for match
